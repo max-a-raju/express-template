@@ -30,8 +30,7 @@ export class BaseController {
      */
     errRes(err: any, res: Response, message = 'Sever Error', status = 500) {
         if (env().stage === 'dev') {
-
-            res.status(status).json({ error: message });
+            res.status(status).json({ error: message, err });
         } else {
             res.status(status).json({ error: message });
         }
