@@ -4,8 +4,8 @@ export = {
     domain:"",
     db:{
         name: 'COLLECTION_NAME',
-        user:'',
-        pw: '',
+        user:'UNAME',
+        pw: 'P@$$VV()RD',
         account: '@mongo-account',
         uri: (user: string, pw :string, name :string, account: string) => {
             return `mongodb+srv://${user}:${pw}${account}.gcp.mongodb.net/${name}?retryWrites=true&w=majority`
